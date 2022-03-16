@@ -7,8 +7,11 @@ import user4Image from '../assets/img/user4-128x128.jpg';
 import moment from 'moment';
 // import { HashRouter, Redirect, Route, Switch } from 'react-router-dom'
 
-// import Dashboard from './views/dashboard/Dashboard';
-// import Login from './views/pages/Login';
+import Dashboard from './dashboard/Dashboard';
+import Import from './import/Import';
+import Export from './export/Export';
+import Transfer from './transfer/Transfer';
+import Warehouse from './warehouse/Warehouse';
 // const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 // const Login = React.lazy(() => import('./views/pages/Login'))
 
@@ -102,14 +105,7 @@ const taskMenu = [
 
 const Default = () => {
 
-  const sidebar = [
-    <Item key="hello" text="Hello" to="/hello-world" />
-  ]
-
   return (
-    // <AdminLTE title={["Hello", "World"]} titleShort={["He", "we"]} theme="blue" sidebar={sidebar}>
-    //   <HelloWorld path="/hello-world" />
-    // </AdminLTE>
     <AdminLTE browserTitle="adminlte-2-react-examples" theme="black">
       <Navbar.Core>
         <Entry
@@ -141,17 +137,17 @@ const Default = () => {
       <Sidebar.Core>
         <Item icon="fas-pencil-ruler" text="NAM KHANH" to="/" />
         <Header text="MAIN NAVIGATION" />
-        <Item to="/dashboard" text="Bảng tin" icon="fa-th" labels={[{ color: 'green', text: 'new', small: true }]} />
+        <Item to="/" text="Bảng tin" icon="fa-th" labels={[{ color: 'green', text: 'new', small: true }]} />
         <Item text="Danh mục" icon="fa-chart-pie">
           <Item text="Loại vật tư" to="/chart-js" />
         </Item>
         <Item active text="Chức năng" icon="fa-tachometer-alt">
-          <Item text="Nhập kho" to="/dashboard" />
-          <Item text="Xuất kho" to="/dashboardv2" />
-          <Item text="Luân chuyển" to="/dashboardv2" />
+          <Item text="Nhập kho" to="/import" />
+          <Item text="Xuất kho" to="/export" />
+          <Item text="Luân chuyển" to="/transfer" />
         </Item>
         <Item text="Quản lý kho" icon="far-copy">
-          <Item text="Kho" to="/top-nav" />
+          <Item text="Kho" to="/warehouse" />
           <Item text="Giá/kệ" to="/boxed" />
         </Item>
         <Item text="Admin" icon="fa-laptop">
@@ -160,7 +156,12 @@ const Default = () => {
         </Item>
         <Item to="/widgets" text="Thông báo" icon="fa-th" labels={[{ color: 'green', text: 'new', small: true }]} />
       </Sidebar.Core>
-      {/* {1<0?<Dashboard path="/" exact />:<Login path="/" exact />} */}
+      <Dashboard path="/" exact />
+      <Import path="/import" exact />
+      <Import path="/import" exact />
+      <Export path="/export" exact />
+      <Transfer path="/transfer" exact />
+      <Warehouse path="/warehouse" exact />
     </AdminLTE>
   )
 }

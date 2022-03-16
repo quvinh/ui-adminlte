@@ -35,8 +35,8 @@ const Login = () => {
   }
 
   return (
-    <div className="hold-transition login-page">
-      <div className="login-box">
+    <div className="login-box">
+      <Box type="primary" border>
         <div className="login-logo">
           <a><b>NAM</b>KHÁNH</a>
         </div>
@@ -62,8 +62,9 @@ const Login = () => {
               </div> */}
             </form>
           </div>
+
         </div>
-      </div>
+      </Box>
     </div>
   )
 }

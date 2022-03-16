@@ -135,18 +135,18 @@ const App = () => {
       <Sidebar.Core>
         <Item icon="fas-pencil-ruler" text="NAM KHANH" to="/" />
         <Header text="MAIN NAVIGATION" />
-        <Item to="/widgets" text="Bảng tin" icon="fa-th" labels={[{ color: 'green', text: 'new', small: true }]} />
+        <Item to="/dashboard" text="Bảng tin" icon="fa-th" labels={[{ color: 'green', text: 'new', small: true }]} />
         <Item text="Danh mục" icon="fa-chart-pie">
-          <Item text="Loại vật tư" to="/chart-js" />
+          <Item text="Loại vật tư" to="/category" />
         </Item>
         <Item active text="Chức năng" icon="fa-tachometer-alt">
-          <Item text="Nhập kho" to="/dashboard" />
-          <Item text="Xuất kho" to="/dashboardv2" />
-          <Item text="Luân chuyển" to="/dashboardv2" />
+          <Item text="Nhập kho" to="/export" />
+          <Item text="Xuất kho" to="/import" />
+          <Item text="Luân chuyển" to="/transfer" />
         </Item>
         <Item text="Quản lý kho" icon="far-copy">
-          <Item text="Kho" to="/top-nav" />
-          <Item text="Giá/kệ" to="/boxed" />
+          <Item text="Kho" to="/warehouse" />
+          <Item text="Giá/kệ" to="/shelf" />
         </Item>
         <Item text="Admin" icon="fa-laptop">
           <Item text="Người dùng" to="/ui-elements/general" />
